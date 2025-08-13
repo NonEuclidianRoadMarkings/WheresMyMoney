@@ -1,9 +1,1 @@
-# THE .gitconfig FILE MUST BE IGNORED IT IS ADDED USING:
-# git config --local include.path ../.gitconfig
-# The above command will add it to the '.git/config' file
-# It allows for a user to work on different projects with different user details
-# to those stored globally at the user level e.g. private and work environments.
-
-*.gitconfig
-
 node_modules/
