@@ -1,34 +1,9 @@
-# Gradle files
-.gradle/
-build/
+# THE .gitconfig FILE MUST BE IGNORED IT IS ADDED USING:
+# git config --local include.path ../.gitconfig
+# The above command will add it to the '.git/config' file
+# It allows for a user to work on different projects with different user details
+# to those stored globally at the user level e.g. private and work environments.
 
-# Local configuration file (sdk path, etc)
-local.properties
+*.gitconfig
 
-# Log/OS Files
-*.log
-
-# Android Studio generated files and folders
-captures/
-.externalNativeBuild/
-.cxx/
-*.aab
-*.apk
-output-metadata.json
-
-# IntelliJ
-*.iml
-.idea/
-misc.xml
-deploymentTargetDropDown.xml
-render.experimental.xml
-
-# Keystore files
-*.jks
-*.keystore
-
-# Google Services (e.g. APIs or Firebase)
-google-services.json
-
-# Android Profiling
-*.hprof
+node_modules/

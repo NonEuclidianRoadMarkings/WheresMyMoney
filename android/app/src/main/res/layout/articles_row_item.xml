@@ -1,0 +1,54 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"      
+    android:id="@+id/articles_row_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    card_view:cardBackgroundColor="#ff5c0064"
+    card_view:cardCornerRadius="8dp"
+    card_view:cardElevation="4dp">
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/articles_row_favicon"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/wealth_wizards_favicon"
+            android:layout_alignParentLeft="true"            
+            android:scaleType="fitCenter"/>
+            
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/articles_row_favicon"
+                android:paddingLeft="16dp"
+                android:orientation="vertical" >
+
+                <!--TextView for displaying Name -->
+                <TextView
+                    android:id="@+id/articles_row_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#ffcccccc"
+                    android:text="Article Title" />
+
+                <!--TextView for displaying Email -->
+                <TextView
+                    android:id="@+id/articles_row_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#ffcccccc"
+                    android:text="Lorem ipsom dolor sit amet" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
