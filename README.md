@@ -12,5 +12,5 @@ In this demo, `ReactNativeApp.tsx` serves as a loader which is passed a 'compone
 
 The react modules can also pass data out to the native modules, using a variety of methods, if needed.
 
-![App Demo](app_demo.gif)
+![App Demo](https://github.com/NonEuclidianRoadMarkings/WheresMyMoney/blob/main/app_demo.gif)
 
