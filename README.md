@@ -82,6 +82,34 @@ Tools such as Style Dictionary can output widgets both for React Native and Reac
 
 ✅ Design System (Style Dictionary works with React Web and React Native)
 
+❌️ Some Libraries Cannot be Shared
+
+Some React JS libraries aren't supported by React Native and have no React Native equivalent release.
+
+In such cases, you may need to find alternative libraries that offer similar functionality or implement the required features natively.
+
+In those cases, you can generally implement a container service or object of some kind, similar to how the UI widget containers are implemented.
+
+See the following article for a summary of one dev's experience with implementing a shared codebase:
+
+[Sharing Code between React Web and Native](https://nx.dev/blog/share-code-between-react-web-react-native-mobile-with-nx)
+
+[Another Dev's Experience with Implementing a Shared React Code Base](https://medium.com/@alex.derville/setting-up-a-react-and-react-native-monorepo-with-turborepo-and-pnpm-8310c1faf18c)
+
+Conclusion from the above Medium article:
+
+>This approach allows us to share configurations, JavaScript utilities, and React hooks across 
+>web and mobile applications, significantly improving development efficiency and code consistency.
+>
+>However, while these benefits are substantial, this approach comes with its own challenges.
+>
+>The primary drawback is that apps become tightly coupled through their shared dependencies. 
+>Though it’s technically possible to use different package versions across apps, doing so often leads 
+>to crashes and unpredictable behavior.
+>
+>This is particularly problematic with core libraries like React and React Native — running different 
+>versions of these packages typically results in stability issues.
+
 ❌️ UI Widgets
 
 [Sharing Code between React Native and React JS](https://blog.bitsrc.io/learn-to-share-code-between-react-native-and-react-js-14065ce5b0c3)
@@ -106,3 +134,7 @@ How to use the same import for React JS (web) and React Native, summarized from 
 >
 >The bundler (such as WebPack) will automatically pick the button.js while 
 >making a web bundle, or pick button.native.js for mobile.
+
+# React Native Docs
+
+https://reactnative.dev/docs/platform-specific-code#:~:text=You%20can%20also%20use%20the,among%20React%20Native%20and%20ReactJS.
