@@ -48,11 +48,29 @@ Assume an API exists that all versions of the app can use to read/write data for
 
 ## ❌️ Sharing Code Between React Native and Native iOS/Android Code
 
-...
+React Native is written in `JavaScript`, while native iOS is written in `Swift`/`Objective-C` and native Android is written in `Kotlin`/`Java`.
 
-## ✅ Sharing Code Between React Native and React Web
+While **native mobile apps can embed React Native modules**, and React Native apps can embded native modules, **code can't easily be shared** between different types of modules.
 
-All the code except for the UI widgets can be shared between React Native and React Web:
+**Data can be shared to and from React Native modules** built into a native mobile app, and vice-versa.
+
+**Loading time should be considered when** a native mobile app is to be **loading React Native modules**, particularly when loading them from a server. It is possible to pre-load modules, cache modules locally for off-line use, and so on, but **it is an added complexity** which should certainly be considered when deciding whether to mix React Native modules into a native mobile application.
+
+It is possible for a React Native app to load native modules on-demand in the unlikely event that the application needed to do something only achievable from within a native Activity.
+
+**Best app performance would be achieved** (and most code-sharing would be possible) **by implementing the application in React Native** to begin with, rather than mixing React Native and native modules.
+
+## ✅ What Code can be Shared Between React Native and React JS (Web)
+
+As long as a design system is used which can output widgets for both React Native and React JS, **the majority of code** in a code base **can be shared** between React Native and React JS.
+
+React JS (web) and React Native both use the same core language (JavaScript), so most code can be shared between them.
+
+The most notable exception is the actual UI Widgets. Those are different between React Native and React JS.
+
+The UI Widgets can be imported in a common manner, however, which means that the code base can be nearly completely shared, if a proper design system is used by both.
+
+Tools such as Style Dictionary can output widgets both for React Native and React JS (web).
 
 ✅ State Management (Context API, Redux, etc.)
 
@@ -62,9 +80,9 @@ All the code except for the UI widgets can be shared between React Native and Re
 
 ✅ Database Connectivity
 
-❌️ UI Widgets
-
 ✅ Design System (Style Dictionary works with React Web and React Native)
+
+❌️ UI Widgets
 
 [Sharing Code between React Native and React JS](https://blog.bitsrc.io/learn-to-share-code-between-react-native-and-react-js-14065ce5b0c3)
 
@@ -72,7 +90,7 @@ All the code except for the UI widgets can be shared between React Native and Re
 
 [GitHub repo - hitButtonContainerComponent.js](https://github.com/HBandesh/reusingCode/blob/master/platform/thanosHitButton/hitButtonContainerComponent.js)
 
-Summarized from the above article:
+How to use the same import for React JS (web) and React Native, summarized from the above article:
 
 >make two various files with the extensions below:
 >
@@ -88,7 +106,3 @@ Summarized from the above article:
 >
 >The bundler (such as WebPack) will automatically pick the button.js while 
 >making a web bundle, or pick button.native.js for mobile.
-
-## ❓ What JavaScript can be shared between React Native and Web
-
-...
